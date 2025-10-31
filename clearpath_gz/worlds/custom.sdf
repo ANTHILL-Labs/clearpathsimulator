@@ -1,0 +1,3338 @@
+<?xml version='1.0' encoding='ASCII'?>
+<sdf version="1.10">
+      <world name="tree_world">
+               <physics type='bullet'>
+                 <max_step_size>0.003</max_step_size>
+                 <real_time_factor>1.0</real_time_factor>
+                 <real_time_update_rate>1000</real_time_update_rate>
+                 <gravity>0 0 -9.8</gravity>
+               </physics>
+        <plugin name='gz::sim::systems::Physics' filename='libgz-sim-physics-system.so'/>
+        <plugin name='gz::sim::systems::UserCommands' filename='libgz-sim-user-commands-system.so'/>
+        <plugin name='gz::sim::systems::SceneBroadcaster' filename='libgz-sim-scene-broadcaster-system.so'/>
+        <plugin name="gz::sim::systems::Sensors" filename="libgz-sim-sensors-system.so">
+          <render_engine>ogre2</render_engine>
+        </plugin>
+        <plugin name="gz::sim::systems::Imu" filename="libgz-sim-imu-system.so"/>
+        <plugin name="gz::sim::systems::NavSat" filename="libgz-sim-navsat-system.so"/>
+        
+        <scene>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <background>0.7 0.8 1.0 1</background>
+          <shadows>true</shadows>
+        </scene>
+        <light name="sun" type="directional">
+          <pose>0 0 10 0 0 0</pose>
+          <diffuse>1.0 1.0 1.0 1</diffuse>
+          <specular>0.3 0.3 0.3 1</specular>
+          <direction>-0.5 0.3 -1</direction>
+          <cast_shadows>true</cast_shadows>
+        </light>
+
+        <spherical_coordinates>
+          <surface_model>EARTH_WGS84</surface_model>
+          <world_frame_orientation>ENU</world_frame_orientation>
+          <latitude_deg>43.500720</latitude_deg>
+          <longitude_deg>-80.546793</longitude_deg>
+          <elevation>329</elevation>.
+        </spherical_coordinates>
+               <include>
+                 <uri>file:///home/felix/clearpath_ws/src/clearpath_simulator/clearpath_gz/meshes/custom/dirt_ground</uri>
+                 <pose>0 0 0 0 0 0</pose>
+               </include>
+    <model name="tree_0_0"><pose>0.00 0.00 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.320 0 0 0</pose>
+      <collision name="trunk_collision">
+        <geometry><cylinder><radius>0.153</radius><length>2.639</length></cylinder></geometry>
+      </collision>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.153</radius><length>2.639</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_0_0_0">
+  <pose>0.147 0.018 2.108 0 0.260279 0.123816</pose>
+  <collision name="frond_0_0_0_collision">
+    <geometry><box><size>1.0 1.0 1.5</size></box></geometry>
+  </collision>
+
+              <visual name="frond_seg_0_0_0_0">
+                <pose>0.000 0 0.237 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.159 0.473</size></box></geometry>
+                <material><diffuse>0.19 0.75 0.27 1</diffuse><ambient>0.19 0.75 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_0_1">
+                <pose>0.061 0 0.702 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.159 0.473</size></box></geometry>
+                <material><diffuse>0.19 0.75 0.27 1</diffuse><ambient>0.19 0.75 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_0_2">
+                <pose>0.241 0 1.135 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.159 0.473</size></box></geometry>
+                <material><diffuse>0.19 0.75 0.27 1</diffuse><ambient>0.19 0.75 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_0_3">
+                <pose>0.526 0 1.507 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.159 0.473</size></box></geometry>
+                <material><diffuse>0.19 0.75 0.27 1</diffuse><ambient>0.19 0.75 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_0_1">
+  <pose>0.105 0.105 1.344 0 0.490066 0.788202</pose>
+
+              <visual name="frond_seg_0_0_1_0">
+                <pose>0.000 0 0.150 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.215 0.300</size></box></geometry>
+                <material><diffuse>0.20 0.77 0.31 1</diffuse><ambient>0.20 0.77 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_1_1">
+                <pose>0.039 0 0.444 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.215 0.300</size></box></geometry>
+                <material><diffuse>0.20 0.77 0.31 1</diffuse><ambient>0.20 0.77 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_1_2">
+                <pose>0.152 0 0.719 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.215 0.300</size></box></geometry>
+                <material><diffuse>0.20 0.77 0.31 1</diffuse><ambient>0.20 0.77 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_1_3">
+                <pose>0.333 0 0.955 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.215 0.300</size></box></geometry>
+                <material><diffuse>0.20 0.77 0.31 1</diffuse><ambient>0.20 0.77 0.31 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_0_2">
+  <pose>-0.024 0.147 1.320 0 0.497148 1.732814</pose>
+
+              <visual name="frond_seg_0_0_2_0">
+                <pose>0.000 0 0.226 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.220 0.451</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.35 1</diffuse><ambient>0.18 0.77 0.35 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_2_1">
+                <pose>0.058 0 0.669 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.220 0.451</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.35 1</diffuse><ambient>0.18 0.77 0.35 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_2_2">
+                <pose>0.230 0 1.083 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.220 0.451</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.35 1</diffuse><ambient>0.18 0.77 0.35 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_2_3">
+                <pose>0.502 0 1.438 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.220 0.451</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.35 1</diffuse><ambient>0.18 0.77 0.35 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_0_3">
+  <pose>-0.096 0.114 1.422 0 0.466665 2.270636</pose>
+
+              <visual name="frond_seg_0_0_3_0">
+                <pose>0.000 0 0.137 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.235 0.274</size></box></geometry>
+                <material><diffuse>0.21 0.83 0.32 1</diffuse><ambient>0.21 0.83 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_3_1">
+                <pose>0.035 0 0.407 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.235 0.274</size></box></geometry>
+                <material><diffuse>0.21 0.83 0.32 1</diffuse><ambient>0.21 0.83 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_3_2">
+                <pose>0.140 0 0.658 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.235 0.274</size></box></geometry>
+                <material><diffuse>0.21 0.83 0.32 1</diffuse><ambient>0.21 0.83 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_3_3">
+                <pose>0.305 0 0.873 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.235 0.274</size></box></geometry>
+                <material><diffuse>0.21 0.83 0.32 1</diffuse><ambient>0.21 0.83 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_0_4">
+  <pose>-0.148 -0.003 2.450 0 0.155517 3.160562</pose>
+
+              <visual name="frond_seg_0_0_4_0">
+                <pose>0.000 0 0.172 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.205 0.345</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.34 1</diffuse><ambient>0.23 0.81 0.34 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_4_1">
+                <pose>0.045 0 0.511 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.205 0.345</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.34 1</diffuse><ambient>0.23 0.81 0.34 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_4_2">
+                <pose>0.175 0 0.827 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.205 0.345</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.34 1</diffuse><ambient>0.23 0.81 0.34 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_4_3">
+                <pose>0.383 0 1.098 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.205 0.345</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.34 1</diffuse><ambient>0.23 0.81 0.34 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_0_5">
+  <pose>-0.101 -0.109 2.141 0 0.250428 3.967492</pose>
+
+              <visual name="frond_seg_0_0_5_0">
+                <pose>0.000 0 0.131 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.173 0.261</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.27 1</diffuse><ambient>0.18 0.76 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_5_1">
+                <pose>0.034 0 0.388 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.173 0.261</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.27 1</diffuse><ambient>0.18 0.76 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_5_2">
+                <pose>0.133 0 0.627 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.173 0.261</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.27 1</diffuse><ambient>0.18 0.76 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_5_3">
+                <pose>0.291 0 0.833 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.173 0.261</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.27 1</diffuse><ambient>0.18 0.76 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_0_6">
+  <pose>-0.031 -0.145 1.640 0 0.401200 4.503474</pose>
+
+              <visual name="frond_seg_0_0_6_0">
+                <pose>0.000 0 0.204 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.186 0.409</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.28 1</diffuse><ambient>0.19 0.77 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_6_1">
+                <pose>0.053 0 0.606 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.186 0.409</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.28 1</diffuse><ambient>0.19 0.77 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_6_2">
+                <pose>0.208 0 0.981 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.186 0.409</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.28 1</diffuse><ambient>0.19 0.77 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_6_3">
+                <pose>0.455 0 1.303 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.186 0.409</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.28 1</diffuse><ambient>0.19 0.77 0.28 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_0_7">
+  <pose>0.126 -0.078 2.549 0 0.106745 5.726419</pose>
+
+              <visual name="frond_seg_0_0_7_0">
+                <pose>0.000 0 0.206 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.211 0.412</size></box></geometry>
+                <material><diffuse>0.17 0.82 0.27 1</diffuse><ambient>0.17 0.82 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_7_1">
+                <pose>0.053 0 0.611 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.211 0.412</size></box></geometry>
+                <material><diffuse>0.17 0.82 0.27 1</diffuse><ambient>0.17 0.82 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_7_2">
+                <pose>0.210 0 0.988 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.211 0.412</size></box></geometry>
+                <material><diffuse>0.17 0.82 0.27 1</diffuse><ambient>0.17 0.82 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_0_7_3">
+                <pose>0.458 0 1.312 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.211 0.412</size></box></geometry>
+                <material><diffuse>0.17 0.82 0.27 1</diffuse><ambient>0.17 0.82 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_0_0_0">
+  <pose>-0.122 -0.045 2.165 0 0.730353 3.499418</pose>
+
+          <visual name="stalk_0_0_0">
+            <pose>0 0 0.233 0 0 0</pose>
+            <geometry><cylinder><radius>0.075</radius><length>0.466</length></cylinder></geometry>
+            <material><diffuse>0.37 0.29 0.14 1</diffuse><ambient>0.37 0.29 0.14 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_0_0_0_seg0">
+                <pose>0 0 0.419 0 0 0</pose>
+                <geometry><sphere><radius>0.122</radius></sphere></geometry>
+                <material><diffuse>0.85 0.78 0.08 1</diffuse><ambient>0.85 0.78 0.08 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_0_seg1">
+                <pose>0 0 0.478 0 0 0</pose>
+                <geometry><sphere><radius>0.144</radius></sphere></geometry>
+                <material><diffuse>0.85 0.78 0.08 1</diffuse><ambient>0.85 0.78 0.08 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_0_seg2">
+                <pose>0 0 0.536 0 0 0</pose>
+                <geometry><sphere><radius>0.166</radius></sphere></geometry>
+                <material><diffuse>0.85 0.78 0.08 1</diffuse><ambient>0.85 0.78 0.08 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_0_seg3">
+                <pose>0 0 0.595 0 0 0</pose>
+                <geometry><sphere><radius>0.188</radius></sphere></geometry>
+                <material><diffuse>0.85 0.78 0.08 1</diffuse><ambient>0.85 0.78 0.08 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_0_seg4">
+                <pose>0 0 0.653 0 0 0</pose>
+                <geometry><sphere><radius>0.166</radius></sphere></geometry>
+                <material><diffuse>0.85 0.78 0.08 1</diffuse><ambient>0.85 0.78 0.08 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_0_seg5">
+                <pose>0 0 0.712 0 0 0</pose>
+                <geometry><sphere><radius>0.144</radius></sphere></geometry>
+                <material><diffuse>0.85 0.78 0.08 1</diffuse><ambient>0.85 0.78 0.08 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_0_seg6">
+                <pose>0 0 0.770 0 0 0</pose>
+                <geometry><sphere><radius>0.122</radius></sphere></geometry>
+                <material><diffuse>0.85 0.78 0.08 1</diffuse><ambient>0.85 0.78 0.08 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_0_0_1">
+  <pose>0.111 -0.066 2.037 0 0.690950 5.746272</pose>
+
+          <visual name="stalk_0_0_1">
+            <pose>0 0 0.193 0 0 0</pose>
+            <geometry><cylinder><radius>0.058</radius><length>0.387</length></cylinder></geometry>
+            <material><diffuse>0.39 0.22 0.15 1</diffuse><ambient>0.39 0.22 0.15 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_0_0_1_seg0">
+                <pose>0 0 0.351 0 0 0</pose>
+                <geometry><sphere><radius>0.094</radius></sphere></geometry>
+                <material><diffuse>0.88 0.81 0.14 1</diffuse><ambient>0.88 0.81 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_1_seg1">
+                <pose>0 0 0.400 0 0 0</pose>
+                <geometry><sphere><radius>0.111</radius></sphere></geometry>
+                <material><diffuse>0.88 0.81 0.14 1</diffuse><ambient>0.88 0.81 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_1_seg2">
+                <pose>0 0 0.449 0 0 0</pose>
+                <geometry><sphere><radius>0.128</radius></sphere></geometry>
+                <material><diffuse>0.88 0.81 0.14 1</diffuse><ambient>0.88 0.81 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_1_seg3">
+                <pose>0 0 0.498 0 0 0</pose>
+                <geometry><sphere><radius>0.145</radius></sphere></geometry>
+                <material><diffuse>0.88 0.81 0.14 1</diffuse><ambient>0.88 0.81 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_1_seg4">
+                <pose>0 0 0.547 0 0 0</pose>
+                <geometry><sphere><radius>0.128</radius></sphere></geometry>
+                <material><diffuse>0.88 0.81 0.14 1</diffuse><ambient>0.88 0.81 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_1_seg5">
+                <pose>0 0 0.596 0 0 0</pose>
+                <geometry><sphere><radius>0.111</radius></sphere></geometry>
+                <material><diffuse>0.88 0.81 0.14 1</diffuse><ambient>0.88 0.81 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_0_1_seg6">
+                <pose>0 0 0.645 0 0 0</pose>
+                <geometry><sphere><radius>0.094</radius></sphere></geometry>
+                <material><diffuse>0.88 0.81 0.14 1</diffuse><ambient>0.88 0.81 0.14 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+<model name="tree_0_1"><pose>9.00 0.00 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.255 0 0 0</pose>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.159</radius><length>2.510</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_0_1_0">
+  <pose>0.153 -0.027 2.008 0 0.252802 -0.178033</pose>
+
+              <visual name="frond_seg_0_1_0_0">
+                <pose>0.000 0 0.200 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.188 0.399</size></box></geometry>
+                <material><diffuse>0.21 0.80 0.28 1</diffuse><ambient>0.21 0.80 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_0_1">
+                <pose>0.052 0 0.592 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.188 0.399</size></box></geometry>
+                <material><diffuse>0.21 0.80 0.28 1</diffuse><ambient>0.21 0.80 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_0_2">
+                <pose>0.203 0 0.957 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.188 0.399</size></box></geometry>
+                <material><diffuse>0.21 0.80 0.28 1</diffuse><ambient>0.21 0.80 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_0_3">
+                <pose>0.444 0 1.271 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.188 0.399</size></box></geometry>
+                <material><diffuse>0.21 0.80 0.28 1</diffuse><ambient>0.21 0.80 0.28 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_1_1">
+  <pose>0.074 0.136 2.294 0 0.160221 1.075067</pose>
+
+              <visual name="frond_seg_0_1_1_0">
+                <pose>0.000 0 0.210 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.161 0.420</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.33 1</diffuse><ambient>0.24 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_1_1">
+                <pose>0.054 0 0.623 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.161 0.420</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.33 1</diffuse><ambient>0.24 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_1_2">
+                <pose>0.214 0 1.008 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.161 0.420</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.33 1</diffuse><ambient>0.24 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_1_3">
+                <pose>0.467 0 1.338 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.161 0.420</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.33 1</diffuse><ambient>0.24 0.83 0.33 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_1_2">
+  <pose>-0.066 0.140 1.576 0 0.389572 2.010711</pose>
+
+              <visual name="frond_seg_0_1_2_0">
+                <pose>0.000 0 0.145 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.150 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.35 1</diffuse><ambient>0.22 0.82 0.35 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_2_1">
+                <pose>0.037 0 0.429 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.150 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.35 1</diffuse><ambient>0.22 0.82 0.35 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_2_2">
+                <pose>0.147 0 0.695 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.150 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.35 1</diffuse><ambient>0.22 0.82 0.35 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_2_3">
+                <pose>0.322 0 0.922 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.150 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.35 1</diffuse><ambient>0.22 0.82 0.35 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_1_3">
+  <pose>-0.154 -0.021 1.816 0 0.313874 3.278756</pose>
+
+              <visual name="frond_seg_0_1_3_0">
+                <pose>0.000 0 0.138 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.213 0.277</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.27 1</diffuse><ambient>0.23 0.80 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_3_1">
+                <pose>0.036 0 0.410 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.213 0.277</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.27 1</diffuse><ambient>0.23 0.80 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_3_2">
+                <pose>0.141 0 0.664 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.213 0.277</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.27 1</diffuse><ambient>0.23 0.80 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_3_3">
+                <pose>0.308 0 0.881 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.213 0.277</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.27 1</diffuse><ambient>0.23 0.80 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_1_4">
+  <pose>-0.086 -0.129 1.429 0 0.436207 4.122772</pose>
+
+              <visual name="frond_seg_0_1_4_0">
+                <pose>0.000 0 0.244 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.242 0.488</size></box></geometry>
+                <material><diffuse>0.24 0.81 0.30 1</diffuse><ambient>0.24 0.81 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_4_1">
+                <pose>0.063 0 0.724 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.242 0.488</size></box></geometry>
+                <material><diffuse>0.24 0.81 0.30 1</diffuse><ambient>0.24 0.81 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_4_2">
+                <pose>0.248 0 1.172 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.242 0.488</size></box></geometry>
+                <material><diffuse>0.24 0.81 0.30 1</diffuse><ambient>0.24 0.81 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_4_3">
+                <pose>0.543 0 1.556 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.242 0.488</size></box></geometry>
+                <material><diffuse>0.24 0.81 0.30 1</diffuse><ambient>0.24 0.81 0.30 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_1_5">
+  <pose>0.049 -0.147 2.420 0 0.100604 5.032762</pose>
+
+              <visual name="frond_seg_0_1_5_0">
+                <pose>0.000 0 0.170 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.249 0.341</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.27 1</diffuse><ambient>0.23 0.77 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_5_1">
+                <pose>0.044 0 0.505 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.249 0.341</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.27 1</diffuse><ambient>0.23 0.77 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_5_2">
+                <pose>0.173 0 0.817 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.249 0.341</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.27 1</diffuse><ambient>0.23 0.77 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_1_5_3">
+                <pose>0.379 0 1.085 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.249 0.341</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.27 1</diffuse><ambient>0.23 0.77 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_0_1_0">
+  <pose>0.119 0.064 2.020 0 0.738607 0.494845</pose>
+
+          <visual name="stalk_0_1_0">
+            <pose>0 0 0.248 0 0 0</pose>
+            <geometry><cylinder><radius>0.074</radius><length>0.497</length></cylinder></geometry>
+            <material><diffuse>0.37 0.25 0.11 1</diffuse><ambient>0.37 0.25 0.11 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_0_1_0_seg0">
+                <pose>0 0 0.450 0 0 0</pose>
+                <geometry><sphere><radius>0.121</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.14 1</diffuse><ambient>0.86 0.82 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_0_seg1">
+                <pose>0 0 0.513 0 0 0</pose>
+                <geometry><sphere><radius>0.143</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.14 1</diffuse><ambient>0.86 0.82 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_0_seg2">
+                <pose>0 0 0.575 0 0 0</pose>
+                <geometry><sphere><radius>0.164</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.14 1</diffuse><ambient>0.86 0.82 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_0_seg3">
+                <pose>0 0 0.638 0 0 0</pose>
+                <geometry><sphere><radius>0.186</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.14 1</diffuse><ambient>0.86 0.82 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_0_seg4">
+                <pose>0 0 0.700 0 0 0</pose>
+                <geometry><sphere><radius>0.164</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.14 1</diffuse><ambient>0.86 0.82 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_0_seg5">
+                <pose>0 0 0.763 0 0 0</pose>
+                <geometry><sphere><radius>0.143</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.14 1</diffuse><ambient>0.86 0.82 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_0_seg6">
+                <pose>0 0 0.826 0 0 0</pose>
+                <geometry><sphere><radius>0.121</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.14 1</diffuse><ambient>0.86 0.82 0.14 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_0_1_1">
+  <pose>0.122 -0.059 2.219 0 0.742684 5.836536</pose>
+
+          <visual name="stalk_0_1_1">
+            <pose>0 0 0.228 0 0 0</pose>
+            <geometry><cylinder><radius>0.071</radius><length>0.457</length></cylinder></geometry>
+            <material><diffuse>0.40 0.22 0.06 1</diffuse><ambient>0.40 0.22 0.06 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_0_1_1_seg0">
+                <pose>0 0 0.413 0 0 0</pose>
+                <geometry><sphere><radius>0.115</radius></sphere></geometry>
+                <material><diffuse>0.92 0.79 0.14 1</diffuse><ambient>0.92 0.79 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_1_seg1">
+                <pose>0 0 0.470 0 0 0</pose>
+                <geometry><sphere><radius>0.136</radius></sphere></geometry>
+                <material><diffuse>0.92 0.79 0.14 1</diffuse><ambient>0.92 0.79 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_1_seg2">
+                <pose>0 0 0.528 0 0 0</pose>
+                <geometry><sphere><radius>0.156</radius></sphere></geometry>
+                <material><diffuse>0.92 0.79 0.14 1</diffuse><ambient>0.92 0.79 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_1_seg3">
+                <pose>0 0 0.585 0 0 0</pose>
+                <geometry><sphere><radius>0.177</radius></sphere></geometry>
+                <material><diffuse>0.92 0.79 0.14 1</diffuse><ambient>0.92 0.79 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_1_seg4">
+                <pose>0 0 0.642 0 0 0</pose>
+                <geometry><sphere><radius>0.156</radius></sphere></geometry>
+                <material><diffuse>0.92 0.79 0.14 1</diffuse><ambient>0.92 0.79 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_1_seg5">
+                <pose>0 0 0.700 0 0 0</pose>
+                <geometry><sphere><radius>0.136</radius></sphere></geometry>
+                <material><diffuse>0.92 0.79 0.14 1</diffuse><ambient>0.92 0.79 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_1_1_seg6">
+                <pose>0 0 0.757 0 0 0</pose>
+                <geometry><sphere><radius>0.115</radius></sphere></geometry>
+                <material><diffuse>0.92 0.79 0.14 1</diffuse><ambient>0.92 0.79 0.14 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+<model name="tree_0_2"><pose>18.00 0.00 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.011 0 0 0</pose>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.205</radius><length>2.021</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_0_2_0">
+  <pose>0.200 0.022 1.056 0 0.459785 0.108825</pose>
+
+              <visual name="frond_seg_0_2_0_0">
+                <pose>0.000 0 0.133 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.153 0.267</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.28 1</diffuse><ambient>0.18 0.80 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_0_1">
+                <pose>0.035 0 0.396 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.153 0.267</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.28 1</diffuse><ambient>0.18 0.80 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_0_2">
+                <pose>0.136 0 0.640 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.153 0.267</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.28 1</diffuse><ambient>0.18 0.80 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_0_3">
+                <pose>0.297 0 0.850 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.153 0.267</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.28 1</diffuse><ambient>0.18 0.80 0.28 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_1">
+  <pose>0.164 0.117 1.488 0 0.290012 0.620682</pose>
+
+              <visual name="frond_seg_0_2_1_0">
+                <pose>0.000 0 0.215 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.238 0.431</size></box></geometry>
+                <material><diffuse>0.21 0.77 0.30 1</diffuse><ambient>0.21 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_1_1">
+                <pose>0.056 0 0.639 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.238 0.431</size></box></geometry>
+                <material><diffuse>0.21 0.77 0.30 1</diffuse><ambient>0.21 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_1_2">
+                <pose>0.219 0 1.034 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.238 0.431</size></box></geometry>
+                <material><diffuse>0.21 0.77 0.30 1</diffuse><ambient>0.21 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_1_3">
+                <pose>0.479 0 1.372 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.238 0.431</size></box></geometry>
+                <material><diffuse>0.21 0.77 0.30 1</diffuse><ambient>0.21 0.77 0.30 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_2">
+  <pose>0.071 0.188 1.088 0 0.447256 1.207974</pose>
+
+              <visual name="frond_seg_0_2_2_0">
+                <pose>0.000 0 0.207 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.185 0.415</size></box></geometry>
+                <material><diffuse>0.19 0.84 0.26 1</diffuse><ambient>0.19 0.84 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_2_1">
+                <pose>0.054 0 0.615 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.185 0.415</size></box></geometry>
+                <material><diffuse>0.19 0.84 0.26 1</diffuse><ambient>0.19 0.84 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_2_2">
+                <pose>0.211 0 0.995 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.185 0.415</size></box></geometry>
+                <material><diffuse>0.19 0.84 0.26 1</diffuse><ambient>0.19 0.84 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_2_3">
+                <pose>0.461 0 1.321 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.185 0.415</size></box></geometry>
+                <material><diffuse>0.19 0.84 0.26 1</diffuse><ambient>0.19 0.84 0.26 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_3">
+  <pose>-0.077 0.186 1.583 0 0.252214 1.965305</pose>
+
+              <visual name="frond_seg_0_2_3_0">
+                <pose>0.000 0 0.133 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.223 0.265</size></box></geometry>
+                <material><diffuse>0.23 0.76 0.27 1</diffuse><ambient>0.23 0.76 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_3_1">
+                <pose>0.034 0 0.393 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.223 0.265</size></box></geometry>
+                <material><diffuse>0.23 0.76 0.27 1</diffuse><ambient>0.23 0.76 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_3_2">
+                <pose>0.135 0 0.636 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.223 0.265</size></box></geometry>
+                <material><diffuse>0.23 0.76 0.27 1</diffuse><ambient>0.23 0.76 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_3_3">
+                <pose>0.295 0 0.845 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.223 0.265</size></box></geometry>
+                <material><diffuse>0.23 0.76 0.27 1</diffuse><ambient>0.23 0.76 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_4">
+  <pose>-0.165 0.115 1.129 0 0.431049 2.532273</pose>
+
+              <visual name="frond_seg_0_2_4_0">
+                <pose>0.000 0 0.148 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.196 0.296</size></box></geometry>
+                <material><diffuse>0.24 0.76 0.33 1</diffuse><ambient>0.24 0.76 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_4_1">
+                <pose>0.038 0 0.439 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.196 0.296</size></box></geometry>
+                <material><diffuse>0.24 0.76 0.33 1</diffuse><ambient>0.24 0.76 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_4_2">
+                <pose>0.151 0 0.710 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.196 0.296</size></box></geometry>
+                <material><diffuse>0.24 0.76 0.33 1</diffuse><ambient>0.24 0.76 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_4_3">
+                <pose>0.329 0 0.943 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.196 0.296</size></box></geometry>
+                <material><diffuse>0.24 0.76 0.33 1</diffuse><ambient>0.24 0.76 0.33 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_5">
+  <pose>-0.198 -0.037 1.091 0 0.445989 3.327976</pose>
+
+              <visual name="frond_seg_0_2_5_0">
+                <pose>0.000 0 0.207 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.204 0.413</size></box></geometry>
+                <material><diffuse>0.15 0.76 0.33 1</diffuse><ambient>0.15 0.76 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_5_1">
+                <pose>0.053 0 0.613 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.204 0.413</size></box></geometry>
+                <material><diffuse>0.15 0.76 0.33 1</diffuse><ambient>0.15 0.76 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_5_2">
+                <pose>0.210 0 0.991 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.204 0.413</size></box></geometry>
+                <material><diffuse>0.15 0.76 0.33 1</diffuse><ambient>0.15 0.76 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_5_3">
+                <pose>0.459 0 1.316 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.204 0.413</size></box></geometry>
+                <material><diffuse>0.15 0.76 0.33 1</diffuse><ambient>0.15 0.76 0.33 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_6">
+  <pose>-0.178 -0.095 1.369 0 0.336954 3.631880</pose>
+
+              <visual name="frond_seg_0_2_6_0">
+                <pose>0.000 0 0.185 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.236 0.370</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.25 1</diffuse><ambient>0.24 0.77 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_6_1">
+                <pose>0.048 0 0.549 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.236 0.370</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.25 1</diffuse><ambient>0.24 0.77 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_6_2">
+                <pose>0.188 0 0.888 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.236 0.370</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.25 1</diffuse><ambient>0.24 0.77 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_6_3">
+                <pose>0.412 0 1.180 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.236 0.370</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.25 1</diffuse><ambient>0.24 0.77 0.25 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_7">
+  <pose>-0.073 -0.188 1.827 0 0.153135 4.340855</pose>
+
+              <visual name="frond_seg_0_2_7_0">
+                <pose>0.000 0 0.223 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.179 0.446</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.33 1</diffuse><ambient>0.22 0.82 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_7_1">
+                <pose>0.058 0 0.662 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.179 0.446</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.33 1</diffuse><ambient>0.22 0.82 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_7_2">
+                <pose>0.227 0 1.071 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.179 0.446</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.33 1</diffuse><ambient>0.22 0.82 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_7_3">
+                <pose>0.496 0 1.422 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.179 0.446</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.33 1</diffuse><ambient>0.22 0.82 0.33 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_8">
+  <pose>0.078 -0.186 1.441 0 0.308589 5.111304</pose>
+
+              <visual name="frond_seg_0_2_8_0">
+                <pose>0.000 0 0.149 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.172 0.297</size></box></geometry>
+                <material><diffuse>0.16 0.82 0.26 1</diffuse><ambient>0.16 0.82 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_8_1">
+                <pose>0.038 0 0.441 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.172 0.297</size></box></geometry>
+                <material><diffuse>0.16 0.82 0.26 1</diffuse><ambient>0.16 0.82 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_8_2">
+                <pose>0.151 0 0.714 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.172 0.297</size></box></geometry>
+                <material><diffuse>0.16 0.82 0.26 1</diffuse><ambient>0.16 0.82 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_8_3">
+                <pose>0.331 0 0.948 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.172 0.297</size></box></geometry>
+                <material><diffuse>0.16 0.82 0.26 1</diffuse><ambient>0.16 0.82 0.26 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_0_2_9">
+  <pose>0.151 -0.134 1.935 0 0.087894 5.557270</pose>
+
+              <visual name="frond_seg_0_2_9_0">
+                <pose>0.000 0 0.131 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.198 0.263</size></box></geometry>
+                <material><diffuse>0.24 0.80 0.26 1</diffuse><ambient>0.24 0.80 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_9_1">
+                <pose>0.034 0 0.389 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.198 0.263</size></box></geometry>
+                <material><diffuse>0.24 0.80 0.26 1</diffuse><ambient>0.24 0.80 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_9_2">
+                <pose>0.134 0 0.630 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.198 0.263</size></box></geometry>
+                <material><diffuse>0.24 0.80 0.26 1</diffuse><ambient>0.24 0.80 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_0_2_9_3">
+                <pose>0.292 0 0.836 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.198 0.263</size></box></geometry>
+                <material><diffuse>0.24 0.80 0.26 1</diffuse><ambient>0.24 0.80 0.26 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_0_2_0">
+  <pose>-0.145 0.100 1.734 0 0.775205 2.536997</pose>
+
+          <visual name="stalk_0_2_0">
+            <pose>0 0 0.218 0 0 0</pose>
+            <geometry><cylinder><radius>0.067</radius><length>0.437</length></cylinder></geometry>
+            <material><diffuse>0.38 0.23 0.12 1</diffuse><ambient>0.38 0.23 0.12 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_0_2_0_seg0">
+                <pose>0 0 0.395 0 0 0</pose>
+                <geometry><sphere><radius>0.109</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.11 1</diffuse><ambient>0.86 0.82 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_0_seg1">
+                <pose>0 0 0.444 0 0 0</pose>
+                <geometry><sphere><radius>0.129</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.11 1</diffuse><ambient>0.86 0.82 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_0_seg2">
+                <pose>0 0 0.494 0 0 0</pose>
+                <geometry><sphere><radius>0.148</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.11 1</diffuse><ambient>0.86 0.82 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_0_seg3">
+                <pose>0 0 0.543 0 0 0</pose>
+                <geometry><sphere><radius>0.168</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.11 1</diffuse><ambient>0.86 0.82 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_0_seg4">
+                <pose>0 0 0.593 0 0 0</pose>
+                <geometry><sphere><radius>0.148</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.11 1</diffuse><ambient>0.86 0.82 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_0_seg5">
+                <pose>0 0 0.642 0 0 0</pose>
+                <geometry><sphere><radius>0.129</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.11 1</diffuse><ambient>0.86 0.82 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_0_seg6">
+                <pose>0 0 0.692 0 0 0</pose>
+                <geometry><sphere><radius>0.109</radius></sphere></geometry>
+                <material><diffuse>0.86 0.82 0.11 1</diffuse><ambient>0.86 0.82 0.11 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_0_2_1">
+  <pose>-0.106 -0.138 1.441 0 0.690666 4.055801</pose>
+
+          <visual name="stalk_0_2_1">
+            <pose>0 0 0.245 0 0 0</pose>
+            <geometry><cylinder><radius>0.078</radius><length>0.490</length></cylinder></geometry>
+            <material><diffuse>0.40 0.25 0.06 1</diffuse><ambient>0.40 0.25 0.06 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_0_2_1_seg0">
+                <pose>0 0 0.442 0 0 0</pose>
+                <geometry><sphere><radius>0.127</radius></sphere></geometry>
+                <material><diffuse>0.91 0.81 0.06 1</diffuse><ambient>0.91 0.81 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_1_seg1">
+                <pose>0 0 0.499 0 0 0</pose>
+                <geometry><sphere><radius>0.149</radius></sphere></geometry>
+                <material><diffuse>0.91 0.81 0.06 1</diffuse><ambient>0.91 0.81 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_1_seg2">
+                <pose>0 0 0.556 0 0 0</pose>
+                <geometry><sphere><radius>0.172</radius></sphere></geometry>
+                <material><diffuse>0.91 0.81 0.06 1</diffuse><ambient>0.91 0.81 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_1_seg3">
+                <pose>0 0 0.612 0 0 0</pose>
+                <geometry><sphere><radius>0.195</radius></sphere></geometry>
+                <material><diffuse>0.91 0.81 0.06 1</diffuse><ambient>0.91 0.81 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_1_seg4">
+                <pose>0 0 0.669 0 0 0</pose>
+                <geometry><sphere><radius>0.172</radius></sphere></geometry>
+                <material><diffuse>0.91 0.81 0.06 1</diffuse><ambient>0.91 0.81 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_1_seg5">
+                <pose>0 0 0.726 0 0 0</pose>
+                <geometry><sphere><radius>0.149</radius></sphere></geometry>
+                <material><diffuse>0.91 0.81 0.06 1</diffuse><ambient>0.91 0.81 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_0_2_1_seg6">
+                <pose>0 0 0.783 0 0 0</pose>
+                <geometry><sphere><radius>0.127</radius></sphere></geometry>
+                <material><diffuse>0.91 0.81 0.06 1</diffuse><ambient>0.91 0.81 0.06 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+<model name="tree_1_0"><pose>4.50 7.79 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.175 0 0 0</pose>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.157</radius><length>2.349</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_1_0_0">
+  <pose>0.153 -0.005 1.736 0 0.312846 -0.032366</pose>
+
+              <visual name="frond_seg_1_0_0_0">
+                <pose>0.000 0 0.163 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.248 0.326</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.32 1</diffuse><ambient>0.23 0.80 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_0_1">
+                <pose>0.042 0 0.483 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.248 0.326</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.32 1</diffuse><ambient>0.23 0.80 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_0_2">
+                <pose>0.166 0 0.781 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.248 0.326</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.32 1</diffuse><ambient>0.23 0.80 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_0_3">
+                <pose>0.362 0 1.037 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.248 0.326</size></box></geometry>
+                <material><diffuse>0.23 0.80 0.32 1</diffuse><ambient>0.23 0.80 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_0_1">
+  <pose>0.092 0.122 2.137 0 0.175526 0.926188</pose>
+
+              <visual name="frond_seg_1_0_1_0">
+                <pose>0.000 0 0.138 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.238 0.276</size></box></geometry>
+                <material><diffuse>0.18 0.84 0.32 1</diffuse><ambient>0.18 0.84 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_1_1">
+                <pose>0.036 0 0.409 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.238 0.276</size></box></geometry>
+                <material><diffuse>0.18 0.84 0.32 1</diffuse><ambient>0.18 0.84 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_1_2">
+                <pose>0.140 0 0.662 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.238 0.276</size></box></geometry>
+                <material><diffuse>0.18 0.84 0.32 1</diffuse><ambient>0.18 0.84 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_1_3">
+                <pose>0.307 0 0.879 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.238 0.276</size></box></geometry>
+                <material><diffuse>0.18 0.84 0.32 1</diffuse><ambient>0.18 0.84 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_0_2">
+  <pose>-0.007 0.153 1.463 0 0.405254 1.614789</pose>
+
+              <visual name="frond_seg_1_0_2_0">
+                <pose>0.000 0 0.151 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.184 0.303</size></box></geometry>
+                <material><diffuse>0.22 0.84 0.30 1</diffuse><ambient>0.22 0.84 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_2_1">
+                <pose>0.039 0 0.449 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.184 0.303</size></box></geometry>
+                <material><diffuse>0.22 0.84 0.30 1</diffuse><ambient>0.22 0.84 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_2_2">
+                <pose>0.154 0 0.726 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.184 0.303</size></box></geometry>
+                <material><diffuse>0.22 0.84 0.30 1</diffuse><ambient>0.22 0.84 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_2_3">
+                <pose>0.337 0 0.964 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.184 0.303</size></box></geometry>
+                <material><diffuse>0.22 0.84 0.30 1</diffuse><ambient>0.22 0.84 0.30 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_0_3">
+  <pose>-0.128 0.084 2.113 0 0.183865 2.562481</pose>
+
+              <visual name="frond_seg_1_0_3_0">
+                <pose>0.000 0 0.131 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.213 0.263</size></box></geometry>
+                <material><diffuse>0.23 0.75 0.28 1</diffuse><ambient>0.23 0.75 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_3_1">
+                <pose>0.034 0 0.390 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.213 0.263</size></box></geometry>
+                <material><diffuse>0.23 0.75 0.28 1</diffuse><ambient>0.23 0.75 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_3_2">
+                <pose>0.134 0 0.630 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.213 0.263</size></box></geometry>
+                <material><diffuse>0.23 0.75 0.28 1</diffuse><ambient>0.23 0.75 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_3_3">
+                <pose>0.292 0 0.837 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.213 0.263</size></box></geometry>
+                <material><diffuse>0.23 0.75 0.28 1</diffuse><ambient>0.23 0.75 0.28 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_0_4">
+  <pose>-0.148 -0.039 2.185 0 0.158546 3.397089</pose>
+
+              <visual name="frond_seg_1_0_4_0">
+                <pose>0.000 0 0.145 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.194 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.81 0.26 1</diffuse><ambient>0.22 0.81 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_4_1">
+                <pose>0.038 0 0.431 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.194 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.81 0.26 1</diffuse><ambient>0.22 0.81 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_4_2">
+                <pose>0.148 0 0.697 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.194 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.81 0.26 1</diffuse><ambient>0.22 0.81 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_4_3">
+                <pose>0.323 0 0.925 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.194 0.290</size></box></geometry>
+                <material><diffuse>0.22 0.81 0.26 1</diffuse><ambient>0.22 0.81 0.26 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_0_5">
+  <pose>0.001 -0.153 1.890 0 0.260609 4.721018</pose>
+
+              <visual name="frond_seg_1_0_5_0">
+                <pose>0.000 0 0.144 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.154 0.287</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.29 1</diffuse><ambient>0.19 0.81 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_5_1">
+                <pose>0.037 0 0.426 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.154 0.287</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.29 1</diffuse><ambient>0.19 0.81 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_5_2">
+                <pose>0.146 0 0.689 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.154 0.287</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.29 1</diffuse><ambient>0.19 0.81 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_5_3">
+                <pose>0.320 0 0.915 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.154 0.287</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.29 1</diffuse><ambient>0.19 0.81 0.29 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_0_6">
+  <pose>0.064 -0.139 2.267 0 0.112136 5.145690</pose>
+
+              <visual name="frond_seg_1_0_6_0">
+                <pose>0.000 0 0.171 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.243 0.341</size></box></geometry>
+                <material><diffuse>0.25 0.75 0.29 1</diffuse><ambient>0.25 0.75 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_6_1">
+                <pose>0.044 0 0.506 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.243 0.341</size></box></geometry>
+                <material><diffuse>0.25 0.75 0.29 1</diffuse><ambient>0.25 0.75 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_6_2">
+                <pose>0.174 0 0.818 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.243 0.341</size></box></geometry>
+                <material><diffuse>0.25 0.75 0.29 1</diffuse><ambient>0.25 0.75 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_0_6_3">
+                <pose>0.380 0 1.087 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.243 0.341</size></box></geometry>
+                <material><diffuse>0.25 0.75 0.29 1</diffuse><ambient>0.25 0.75 0.29 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_1_0_0">
+  <pose>-0.066 -0.115 1.945 0 0.672594 4.190466</pose>
+
+          <visual name="stalk_1_0_0">
+            <pose>0 0 0.241 0 0 0</pose>
+            <geometry><cylinder><radius>0.067</radius><length>0.481</length></cylinder></geometry>
+            <material><diffuse>0.37 0.28 0.07 1</diffuse><ambient>0.37 0.28 0.07 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_1_0_0_seg0">
+                <pose>0 0 0.439 0 0 0</pose>
+                <geometry><sphere><radius>0.109</radius></sphere></geometry>
+                <material><diffuse>0.92 0.84 0.07 1</diffuse><ambient>0.92 0.84 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_0_seg1">
+                <pose>0 0 0.502 0 0 0</pose>
+                <geometry><sphere><radius>0.128</radius></sphere></geometry>
+                <material><diffuse>0.92 0.84 0.07 1</diffuse><ambient>0.92 0.84 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_0_seg2">
+                <pose>0 0 0.564 0 0 0</pose>
+                <geometry><sphere><radius>0.148</radius></sphere></geometry>
+                <material><diffuse>0.92 0.84 0.07 1</diffuse><ambient>0.92 0.84 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_0_seg3">
+                <pose>0 0 0.626 0 0 0</pose>
+                <geometry><sphere><radius>0.167</radius></sphere></geometry>
+                <material><diffuse>0.92 0.84 0.07 1</diffuse><ambient>0.92 0.84 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_0_seg4">
+                <pose>0 0 0.688 0 0 0</pose>
+                <geometry><sphere><radius>0.148</radius></sphere></geometry>
+                <material><diffuse>0.92 0.84 0.07 1</diffuse><ambient>0.92 0.84 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_0_seg5">
+                <pose>0 0 0.751 0 0 0</pose>
+                <geometry><sphere><radius>0.128</radius></sphere></geometry>
+                <material><diffuse>0.92 0.84 0.07 1</diffuse><ambient>0.92 0.84 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_0_seg6">
+                <pose>0 0 0.813 0 0 0</pose>
+                <geometry><sphere><radius>0.109</radius></sphere></geometry>
+                <material><diffuse>0.92 0.84 0.07 1</diffuse><ambient>0.92 0.84 0.07 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_1_0_1">
+  <pose>0.058 0.121 1.816 0 0.772219 1.126956</pose>
+
+          <visual name="stalk_1_0_1">
+            <pose>0 0 0.206 0 0 0</pose>
+            <geometry><cylinder><radius>0.073</radius><length>0.412</length></cylinder></geometry>
+            <material><diffuse>0.42 0.24 0.05 1</diffuse><ambient>0.42 0.24 0.05 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_1_0_1_seg0">
+                <pose>0 0 0.366 0 0 0</pose>
+                <geometry><sphere><radius>0.119</radius></sphere></geometry>
+                <material><diffuse>0.92 0.77 0.07 1</diffuse><ambient>0.92 0.77 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_1_seg1">
+                <pose>0 0 0.430 0 0 0</pose>
+                <geometry><sphere><radius>0.141</radius></sphere></geometry>
+                <material><diffuse>0.92 0.77 0.07 1</diffuse><ambient>0.92 0.77 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_1_seg2">
+                <pose>0 0 0.493 0 0 0</pose>
+                <geometry><sphere><radius>0.162</radius></sphere></geometry>
+                <material><diffuse>0.92 0.77 0.07 1</diffuse><ambient>0.92 0.77 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_1_seg3">
+                <pose>0 0 0.557 0 0 0</pose>
+                <geometry><sphere><radius>0.184</radius></sphere></geometry>
+                <material><diffuse>0.92 0.77 0.07 1</diffuse><ambient>0.92 0.77 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_1_seg4">
+                <pose>0 0 0.621 0 0 0</pose>
+                <geometry><sphere><radius>0.162</radius></sphere></geometry>
+                <material><diffuse>0.92 0.77 0.07 1</diffuse><ambient>0.92 0.77 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_1_seg5">
+                <pose>0 0 0.685 0 0 0</pose>
+                <geometry><sphere><radius>0.141</radius></sphere></geometry>
+                <material><diffuse>0.92 0.77 0.07 1</diffuse><ambient>0.92 0.77 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_1_seg6">
+                <pose>0 0 0.749 0 0 0</pose>
+                <geometry><sphere><radius>0.119</radius></sphere></geometry>
+                <material><diffuse>0.92 0.77 0.07 1</diffuse><ambient>0.92 0.77 0.07 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_1_0_2">
+  <pose>0.042 0.128 1.844 0 0.771165 1.253953</pose>
+
+          <visual name="stalk_1_0_2">
+            <pose>0 0 0.237 0 0 0</pose>
+            <geometry><cylinder><radius>0.060</radius><length>0.473</length></cylinder></geometry>
+            <material><diffuse>0.38 0.21 0.13 1</diffuse><ambient>0.38 0.21 0.13 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_1_0_2_seg0">
+                <pose>0 0 0.435 0 0 0</pose>
+                <geometry><sphere><radius>0.098</radius></sphere></geometry>
+                <material><diffuse>0.87 0.82 0.09 1</diffuse><ambient>0.87 0.82 0.09 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_2_seg1">
+                <pose>0 0 0.490 0 0 0</pose>
+                <geometry><sphere><radius>0.116</radius></sphere></geometry>
+                <material><diffuse>0.87 0.82 0.09 1</diffuse><ambient>0.87 0.82 0.09 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_2_seg2">
+                <pose>0 0 0.545 0 0 0</pose>
+                <geometry><sphere><radius>0.134</radius></sphere></geometry>
+                <material><diffuse>0.87 0.82 0.09 1</diffuse><ambient>0.87 0.82 0.09 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_2_seg3">
+                <pose>0 0 0.601 0 0 0</pose>
+                <geometry><sphere><radius>0.151</radius></sphere></geometry>
+                <material><diffuse>0.87 0.82 0.09 1</diffuse><ambient>0.87 0.82 0.09 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_2_seg4">
+                <pose>0 0 0.656 0 0 0</pose>
+                <geometry><sphere><radius>0.134</radius></sphere></geometry>
+                <material><diffuse>0.87 0.82 0.09 1</diffuse><ambient>0.87 0.82 0.09 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_2_seg5">
+                <pose>0 0 0.711 0 0 0</pose>
+                <geometry><sphere><radius>0.116</radius></sphere></geometry>
+                <material><diffuse>0.87 0.82 0.09 1</diffuse><ambient>0.87 0.82 0.09 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_0_2_seg6">
+                <pose>0 0 0.766 0 0 0</pose>
+                <geometry><sphere><radius>0.098</radius></sphere></geometry>
+                <material><diffuse>0.87 0.82 0.09 1</diffuse><ambient>0.87 0.82 0.09 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+<model name="tree_1_1"><pose>13.50 7.79 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.176 0 0 0</pose>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.201</radius><length>2.351</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_1_1_0">
+  <pose>0.193 -0.039 2.184 0 0.218962 -0.201407</pose>
+
+              <visual name="frond_seg_1_1_0_0">
+                <pose>0.000 0 0.147 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.246 0.295</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_0_1">
+                <pose>0.038 0 0.437 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.246 0.295</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_0_2">
+                <pose>0.150 0 0.707 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.246 0.295</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_0_3">
+                <pose>0.328 0 0.939 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.246 0.295</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_1">
+  <pose>0.144 0.134 1.499 0 0.451067 0.747984</pose>
+
+              <visual name="frond_seg_1_1_1_0">
+                <pose>0.000 0 0.201 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.201 0.402</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.28 1</diffuse><ambient>0.19 0.81 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_1_1">
+                <pose>0.052 0 0.595 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.201 0.402</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.28 1</diffuse><ambient>0.19 0.81 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_1_2">
+                <pose>0.204 0 0.963 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.201 0.402</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.28 1</diffuse><ambient>0.19 0.81 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_1_3">
+                <pose>0.447 0 1.279 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.201 0.402</size></box></geometry>
+                <material><diffuse>0.19 0.81 0.28 1</diffuse><ambient>0.19 0.81 0.28 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_2">
+  <pose>0.040 0.193 1.171 0 0.561332 1.365957</pose>
+
+              <visual name="frond_seg_1_1_2_0">
+                <pose>0.000 0 0.241 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.204 0.481</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.32 1</diffuse><ambient>0.22 0.82 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_2_1">
+                <pose>0.062 0 0.714 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.204 0.481</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.32 1</diffuse><ambient>0.22 0.82 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_2_2">
+                <pose>0.245 0 1.155 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.204 0.481</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.32 1</diffuse><ambient>0.22 0.82 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_2_3">
+                <pose>0.535 0 1.533 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.204 0.481</size></box></geometry>
+                <material><diffuse>0.22 0.82 0.32 1</diffuse><ambient>0.22 0.82 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_3">
+  <pose>-0.047 0.191 1.243 0 0.537199 1.813862</pose>
+
+              <visual name="frond_seg_1_1_3_0">
+                <pose>0.000 0 0.208 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.183 0.416</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.32 1</diffuse><ambient>0.18 0.83 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_3_1">
+                <pose>0.054 0 0.617 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.183 0.416</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.32 1</diffuse><ambient>0.18 0.83 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_3_2">
+                <pose>0.212 0 0.998 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.183 0.416</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.32 1</diffuse><ambient>0.18 0.83 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_3_3">
+                <pose>0.463 0 1.325 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.183 0.416</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.32 1</diffuse><ambient>0.18 0.83 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_4">
+  <pose>-0.146 0.132 1.495 0 0.452619 2.408723</pose>
+
+              <visual name="frond_seg_1_1_4_0">
+                <pose>0.000 0 0.176 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.190 0.352</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_4_1">
+                <pose>0.046 0 0.522 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.190 0.352</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_4_2">
+                <pose>0.179 0 0.845 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.190 0.352</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_4_3">
+                <pose>0.392 0 1.122 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.190 0.352</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.29 1</diffuse><ambient>0.18 0.76 0.29 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_5">
+  <pose>-0.192 -0.045 1.880 0 0.322546 3.372167</pose>
+
+              <visual name="frond_seg_1_1_5_0">
+                <pose>0.000 0 0.238 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.212 0.476</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.25 1</diffuse><ambient>0.18 0.80 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_5_1">
+                <pose>0.062 0 0.705 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.212 0.476</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.25 1</diffuse><ambient>0.18 0.80 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_5_2">
+                <pose>0.242 0 1.141 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.212 0.476</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.25 1</diffuse><ambient>0.18 0.80 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_5_3">
+                <pose>0.529 0 1.515 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.212 0.476</size></box></geometry>
+                <material><diffuse>0.18 0.80 0.25 1</diffuse><ambient>0.18 0.80 0.25 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_6">
+  <pose>-0.171 -0.097 1.621 0 0.409994 3.658339</pose>
+
+              <visual name="frond_seg_1_1_6_0">
+                <pose>0.000 0 0.197 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.215 0.395</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.27 1</diffuse><ambient>0.20 0.79 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_6_1">
+                <pose>0.051 0 0.586 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.215 0.395</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.27 1</diffuse><ambient>0.20 0.79 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_6_2">
+                <pose>0.201 0 0.948 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.215 0.395</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.27 1</diffuse><ambient>0.20 0.79 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_6_3">
+                <pose>0.439 0 1.258 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.215 0.395</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.27 1</diffuse><ambient>0.20 0.79 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_7">
+  <pose>-0.063 -0.186 2.113 0 0.243426 4.384190</pose>
+
+              <visual name="frond_seg_1_1_7_0">
+                <pose>0.000 0 0.225 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.167 0.449</size></box></geometry>
+                <material><diffuse>0.16 0.80 0.31 1</diffuse><ambient>0.16 0.80 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_7_1">
+                <pose>0.058 0 0.666 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.167 0.449</size></box></geometry>
+                <material><diffuse>0.16 0.80 0.31 1</diffuse><ambient>0.16 0.80 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_7_2">
+                <pose>0.228 0 1.077 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.167 0.449</size></box></geometry>
+                <material><diffuse>0.16 0.80 0.31 1</diffuse><ambient>0.16 0.80 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_7_3">
+                <pose>0.499 0 1.430 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.167 0.449</size></box></geometry>
+                <material><diffuse>0.16 0.80 0.31 1</diffuse><ambient>0.16 0.80 0.31 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_8">
+  <pose>0.044 -0.192 2.027 0 0.272675 4.940253</pose>
+
+              <visual name="frond_seg_1_1_8_0">
+                <pose>0.000 0 0.219 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.217 0.438</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.25 1</diffuse><ambient>0.17 0.77 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_8_1">
+                <pose>0.057 0 0.649 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.217 0.438</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.25 1</diffuse><ambient>0.17 0.77 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_8_2">
+                <pose>0.223 0 1.050 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.217 0.438</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.25 1</diffuse><ambient>0.17 0.77 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_8_3">
+                <pose>0.487 0 1.395 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.217 0.438</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.25 1</diffuse><ambient>0.17 0.77 0.25 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_1_1_9">
+  <pose>0.142 -0.136 2.281 0 0.169230 5.521267</pose>
+
+              <visual name="frond_seg_1_1_9_0">
+                <pose>0.000 0 0.184 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.235 0.369</size></box></geometry>
+                <material><diffuse>0.16 0.79 0.31 1</diffuse><ambient>0.16 0.79 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_9_1">
+                <pose>0.048 0 0.547 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.235 0.369</size></box></geometry>
+                <material><diffuse>0.16 0.79 0.31 1</diffuse><ambient>0.16 0.79 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_9_2">
+                <pose>0.188 0 0.885 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.235 0.369</size></box></geometry>
+                <material><diffuse>0.16 0.79 0.31 1</diffuse><ambient>0.16 0.79 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_1_1_9_3">
+                <pose>0.410 0 1.175 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.235 0.369</size></box></geometry>
+                <material><diffuse>0.16 0.79 0.31 1</diffuse><ambient>0.16 0.79 0.31 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_1_1_0">
+  <pose>-0.056 -0.161 1.711 0 0.697150 4.375323</pose>
+
+          <visual name="stalk_1_1_0">
+            <pose>0 0 0.224 0 0 0</pose>
+            <geometry><cylinder><radius>0.057</radius><length>0.448</length></cylinder></geometry>
+            <material><diffuse>0.39 0.22 0.15 1</diffuse><ambient>0.39 0.22 0.15 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_1_1_0_seg0">
+                <pose>0 0 0.413 0 0 0</pose>
+                <geometry><sphere><radius>0.093</radius></sphere></geometry>
+                <material><diffuse>0.93 0.83 0.06 1</diffuse><ambient>0.93 0.83 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_0_seg1">
+                <pose>0 0 0.454 0 0 0</pose>
+                <geometry><sphere><radius>0.110</radius></sphere></geometry>
+                <material><diffuse>0.93 0.83 0.06 1</diffuse><ambient>0.93 0.83 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_0_seg2">
+                <pose>0 0 0.496 0 0 0</pose>
+                <geometry><sphere><radius>0.127</radius></sphere></geometry>
+                <material><diffuse>0.93 0.83 0.06 1</diffuse><ambient>0.93 0.83 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_0_seg3">
+                <pose>0 0 0.538 0 0 0</pose>
+                <geometry><sphere><radius>0.143</radius></sphere></geometry>
+                <material><diffuse>0.93 0.83 0.06 1</diffuse><ambient>0.93 0.83 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_0_seg4">
+                <pose>0 0 0.580 0 0 0</pose>
+                <geometry><sphere><radius>0.127</radius></sphere></geometry>
+                <material><diffuse>0.93 0.83 0.06 1</diffuse><ambient>0.93 0.83 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_0_seg5">
+                <pose>0 0 0.622 0 0 0</pose>
+                <geometry><sphere><radius>0.110</radius></sphere></geometry>
+                <material><diffuse>0.93 0.83 0.06 1</diffuse><ambient>0.93 0.83 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_0_seg6">
+                <pose>0 0 0.664 0 0 0</pose>
+                <geometry><sphere><radius>0.093</radius></sphere></geometry>
+                <material><diffuse>0.93 0.83 0.06 1</diffuse><ambient>0.93 0.83 0.06 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_1_1_1">
+  <pose>0.161 0.052 1.865 0 0.654359 0.315531</pose>
+
+          <visual name="stalk_1_1_1">
+            <pose>0 0 0.209 0 0 0</pose>
+            <geometry><cylinder><radius>0.075</radius><length>0.418</length></cylinder></geometry>
+            <material><diffuse>0.45 0.29 0.11 1</diffuse><ambient>0.45 0.29 0.11 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_1_1_1_seg0">
+                <pose>0 0 0.371 0 0 0</pose>
+                <geometry><sphere><radius>0.123</radius></sphere></geometry>
+                <material><diffuse>0.92 0.85 0.11 1</diffuse><ambient>0.92 0.85 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_1_seg1">
+                <pose>0 0 0.439 0 0 0</pose>
+                <geometry><sphere><radius>0.145</radius></sphere></geometry>
+                <material><diffuse>0.92 0.85 0.11 1</diffuse><ambient>0.92 0.85 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_1_seg2">
+                <pose>0 0 0.507 0 0 0</pose>
+                <geometry><sphere><radius>0.167</radius></sphere></geometry>
+                <material><diffuse>0.92 0.85 0.11 1</diffuse><ambient>0.92 0.85 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_1_seg3">
+                <pose>0 0 0.574 0 0 0</pose>
+                <geometry><sphere><radius>0.189</radius></sphere></geometry>
+                <material><diffuse>0.92 0.85 0.11 1</diffuse><ambient>0.92 0.85 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_1_seg4">
+                <pose>0 0 0.642 0 0 0</pose>
+                <geometry><sphere><radius>0.167</radius></sphere></geometry>
+                <material><diffuse>0.92 0.85 0.11 1</diffuse><ambient>0.92 0.85 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_1_seg5">
+                <pose>0 0 0.709 0 0 0</pose>
+                <geometry><sphere><radius>0.145</radius></sphere></geometry>
+                <material><diffuse>0.92 0.85 0.11 1</diffuse><ambient>0.92 0.85 0.11 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_1_seg6">
+                <pose>0 0 0.777 0 0 0</pose>
+                <geometry><sphere><radius>0.123</radius></sphere></geometry>
+                <material><diffuse>0.92 0.85 0.11 1</diffuse><ambient>0.92 0.85 0.11 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_1_1_2">
+  <pose>-0.010 0.169 1.845 0 0.654017 1.628549</pose>
+
+          <visual name="stalk_1_1_2">
+            <pose>0 0 0.232 0 0 0</pose>
+            <geometry><cylinder><radius>0.069</radius><length>0.465</length></cylinder></geometry>
+            <material><diffuse>0.38 0.23 0.08 1</diffuse><ambient>0.38 0.23 0.08 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_1_1_2_seg0">
+                <pose>0 0 0.422 0 0 0</pose>
+                <geometry><sphere><radius>0.112</radius></sphere></geometry>
+                <material><diffuse>0.91 0.78 0.06 1</diffuse><ambient>0.91 0.78 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_2_seg1">
+                <pose>0 0 0.480 0 0 0</pose>
+                <geometry><sphere><radius>0.132</radius></sphere></geometry>
+                <material><diffuse>0.91 0.78 0.06 1</diffuse><ambient>0.91 0.78 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_2_seg2">
+                <pose>0 0 0.537 0 0 0</pose>
+                <geometry><sphere><radius>0.153</radius></sphere></geometry>
+                <material><diffuse>0.91 0.78 0.06 1</diffuse><ambient>0.91 0.78 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_2_seg3">
+                <pose>0 0 0.595 0 0 0</pose>
+                <geometry><sphere><radius>0.173</radius></sphere></geometry>
+                <material><diffuse>0.91 0.78 0.06 1</diffuse><ambient>0.91 0.78 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_2_seg4">
+                <pose>0 0 0.653 0 0 0</pose>
+                <geometry><sphere><radius>0.153</radius></sphere></geometry>
+                <material><diffuse>0.91 0.78 0.06 1</diffuse><ambient>0.91 0.78 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_2_seg5">
+                <pose>0 0 0.711 0 0 0</pose>
+                <geometry><sphere><radius>0.132</radius></sphere></geometry>
+                <material><diffuse>0.91 0.78 0.06 1</diffuse><ambient>0.91 0.78 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_1_1_2_seg6">
+                <pose>0 0 0.769 0 0 0</pose>
+                <geometry><sphere><radius>0.112</radius></sphere></geometry>
+                <material><diffuse>0.91 0.78 0.06 1</diffuse><ambient>0.91 0.78 0.06 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+<model name="tree_2_0"><pose>0.00 15.59 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.270 0 0 0</pose>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.164</radius><length>2.540</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_2_0_0">
+  <pose>0.159 0.017 1.336 0 0.517824 0.108081</pose>
+
+              <visual name="frond_seg_2_0_0_0">
+                <pose>0.000 0 0.176 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.204 0.352</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.29 1</diffuse><ambient>0.19 0.77 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_0_1">
+                <pose>0.046 0 0.522 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.204 0.352</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.29 1</diffuse><ambient>0.19 0.77 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_0_2">
+                <pose>0.179 0 0.844 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.204 0.352</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.29 1</diffuse><ambient>0.19 0.77 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_0_3">
+                <pose>0.391 0 1.121 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.204 0.352</size></box></geometry>
+                <material><diffuse>0.19 0.77 0.29 1</diffuse><ambient>0.19 0.77 0.29 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_0_1">
+  <pose>0.071 0.143 1.926 0 0.334093 1.109571</pose>
+
+              <visual name="frond_seg_2_0_1_0">
+                <pose>0.000 0 0.212 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.236 0.424</size></box></geometry>
+                <material><diffuse>0.23 0.79 0.25 1</diffuse><ambient>0.23 0.79 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_1_1">
+                <pose>0.055 0 0.629 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.236 0.424</size></box></geometry>
+                <material><diffuse>0.23 0.79 0.25 1</diffuse><ambient>0.23 0.79 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_1_2">
+                <pose>0.216 0 1.017 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.236 0.424</size></box></geometry>
+                <material><diffuse>0.23 0.79 0.25 1</diffuse><ambient>0.23 0.79 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_1_3">
+                <pose>0.472 0 1.350 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.236 0.424</size></box></geometry>
+                <material><diffuse>0.23 0.79 0.25 1</diffuse><ambient>0.23 0.79 0.25 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_0_2">
+  <pose>-0.023 0.158 2.117 0 0.274224 1.717577</pose>
+
+              <visual name="frond_seg_2_0_2_0">
+                <pose>0.000 0 0.232 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.245 0.463</size></box></geometry>
+                <material><diffuse>0.19 0.82 0.30 1</diffuse><ambient>0.19 0.82 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_2_1">
+                <pose>0.060 0 0.687 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.245 0.463</size></box></geometry>
+                <material><diffuse>0.19 0.82 0.30 1</diffuse><ambient>0.19 0.82 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_2_2">
+                <pose>0.236 0 1.112 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.245 0.463</size></box></geometry>
+                <material><diffuse>0.19 0.82 0.30 1</diffuse><ambient>0.19 0.82 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_2_3">
+                <pose>0.515 0 1.476 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.245 0.463</size></box></geometry>
+                <material><diffuse>0.19 0.82 0.30 1</diffuse><ambient>0.19 0.82 0.30 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_0_3">
+  <pose>-0.148 0.061 1.514 0 0.462579 2.746857</pose>
+
+              <visual name="frond_seg_2_0_3_0">
+                <pose>0.000 0 0.152 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.194 0.305</size></box></geometry>
+                <material><diffuse>0.15 0.78 0.32 1</diffuse><ambient>0.15 0.78 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_3_1">
+                <pose>0.039 0 0.452 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.194 0.305</size></box></geometry>
+                <material><diffuse>0.15 0.78 0.32 1</diffuse><ambient>0.15 0.78 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_3_2">
+                <pose>0.155 0 0.731 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.194 0.305</size></box></geometry>
+                <material><diffuse>0.15 0.78 0.32 1</diffuse><ambient>0.15 0.78 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_3_3">
+                <pose>0.339 0 0.971 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.194 0.305</size></box></geometry>
+                <material><diffuse>0.15 0.78 0.32 1</diffuse><ambient>0.15 0.78 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_0_4">
+  <pose>-0.147 -0.062 1.451 0 0.482192 3.540292</pose>
+
+              <visual name="frond_seg_2_0_4_0">
+                <pose>0.000 0 0.183 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.163 0.367</size></box></geometry>
+                <material><diffuse>0.21 0.75 0.29 1</diffuse><ambient>0.21 0.75 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_4_1">
+                <pose>0.047 0 0.544 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.163 0.367</size></box></geometry>
+                <material><diffuse>0.21 0.75 0.29 1</diffuse><ambient>0.21 0.75 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_4_2">
+                <pose>0.187 0 0.880 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.163 0.367</size></box></geometry>
+                <material><diffuse>0.21 0.75 0.29 1</diffuse><ambient>0.21 0.75 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_4_3">
+                <pose>0.408 0 1.169 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.163 0.367</size></box></geometry>
+                <material><diffuse>0.21 0.75 0.29 1</diffuse><ambient>0.21 0.75 0.29 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_0_5">
+  <pose>-0.030 -0.157 1.294 0 0.530945 4.521705</pose>
+
+              <visual name="frond_seg_2_0_5_0">
+                <pose>0.000 0 0.205 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.164 0.411</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.29 1</diffuse><ambient>0.20 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_5_1">
+                <pose>0.053 0 0.609 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.164 0.411</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.29 1</diffuse><ambient>0.20 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_5_2">
+                <pose>0.209 0 0.985 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.164 0.411</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.29 1</diffuse><ambient>0.20 0.76 0.29 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_5_3">
+                <pose>0.457 0 1.308 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.164 0.411</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.29 1</diffuse><ambient>0.20 0.76 0.29 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_0_6">
+  <pose>0.080 -0.139 2.462 0 0.147825 5.234613</pose>
+
+              <visual name="frond_seg_2_0_6_0">
+                <pose>0.000 0 0.166 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.226 0.332</size></box></geometry>
+                <material><diffuse>0.19 0.83 0.33 1</diffuse><ambient>0.19 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_6_1">
+                <pose>0.043 0 0.492 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.226 0.332</size></box></geometry>
+                <material><diffuse>0.19 0.83 0.33 1</diffuse><ambient>0.19 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_6_2">
+                <pose>0.169 0 0.796 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.226 0.332</size></box></geometry>
+                <material><diffuse>0.19 0.83 0.33 1</diffuse><ambient>0.19 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_0_6_3">
+                <pose>0.369 0 1.057 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.226 0.332</size></box></geometry>
+                <material><diffuse>0.19 0.83 0.33 1</diffuse><ambient>0.19 0.83 0.33 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_0_0">
+  <pose>0.119 0.067 1.887 0 0.614248 0.514632</pose>
+
+          <visual name="stalk_2_0_0">
+            <pose>0 0 0.250 0 0 0</pose>
+            <geometry><cylinder><radius>0.066</radius><length>0.500</length></cylinder></geometry>
+            <material><diffuse>0.43 0.29 0.07 1</diffuse><ambient>0.43 0.29 0.07 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_0_0_seg0">
+                <pose>0 0 0.459 0 0 0</pose>
+                <geometry><sphere><radius>0.108</radius></sphere></geometry>
+                <material><diffuse>0.92 0.83 0.12 1</diffuse><ambient>0.92 0.83 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_0_seg1">
+                <pose>0 0 0.512 0 0 0</pose>
+                <geometry><sphere><radius>0.127</radius></sphere></geometry>
+                <material><diffuse>0.92 0.83 0.12 1</diffuse><ambient>0.92 0.83 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_0_seg2">
+                <pose>0 0 0.565 0 0 0</pose>
+                <geometry><sphere><radius>0.146</radius></sphere></geometry>
+                <material><diffuse>0.92 0.83 0.12 1</diffuse><ambient>0.92 0.83 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_0_seg3">
+                <pose>0 0 0.618 0 0 0</pose>
+                <geometry><sphere><radius>0.165</radius></sphere></geometry>
+                <material><diffuse>0.92 0.83 0.12 1</diffuse><ambient>0.92 0.83 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_0_seg4">
+                <pose>0 0 0.671 0 0 0</pose>
+                <geometry><sphere><radius>0.146</radius></sphere></geometry>
+                <material><diffuse>0.92 0.83 0.12 1</diffuse><ambient>0.92 0.83 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_0_seg5">
+                <pose>0 0 0.724 0 0 0</pose>
+                <geometry><sphere><radius>0.127</radius></sphere></geometry>
+                <material><diffuse>0.92 0.83 0.12 1</diffuse><ambient>0.92 0.83 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_0_seg6">
+                <pose>0 0 0.777 0 0 0</pose>
+                <geometry><sphere><radius>0.108</radius></sphere></geometry>
+                <material><diffuse>0.92 0.83 0.12 1</diffuse><ambient>0.92 0.83 0.12 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_0_1">
+  <pose>-0.067 -0.122 1.821 0 0.709296 4.206334</pose>
+
+          <visual name="stalk_2_0_1">
+            <pose>0 0 0.227 0 0 0</pose>
+            <geometry><cylinder><radius>0.057</radius><length>0.455</length></cylinder></geometry>
+            <material><diffuse>0.36 0.28 0.15 1</diffuse><ambient>0.36 0.28 0.15 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_0_1_seg0">
+                <pose>0 0 0.420 0 0 0</pose>
+                <geometry><sphere><radius>0.092</radius></sphere></geometry>
+                <material><diffuse>0.87 0.81 0.12 1</diffuse><ambient>0.87 0.81 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_1_seg1">
+                <pose>0 0 0.470 0 0 0</pose>
+                <geometry><sphere><radius>0.108</radius></sphere></geometry>
+                <material><diffuse>0.87 0.81 0.12 1</diffuse><ambient>0.87 0.81 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_1_seg2">
+                <pose>0 0 0.520 0 0 0</pose>
+                <geometry><sphere><radius>0.125</radius></sphere></geometry>
+                <material><diffuse>0.87 0.81 0.12 1</diffuse><ambient>0.87 0.81 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_1_seg3">
+                <pose>0 0 0.570 0 0 0</pose>
+                <geometry><sphere><radius>0.141</radius></sphere></geometry>
+                <material><diffuse>0.87 0.81 0.12 1</diffuse><ambient>0.87 0.81 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_1_seg4">
+                <pose>0 0 0.621 0 0 0</pose>
+                <geometry><sphere><radius>0.125</radius></sphere></geometry>
+                <material><diffuse>0.87 0.81 0.12 1</diffuse><ambient>0.87 0.81 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_1_seg5">
+                <pose>0 0 0.671 0 0 0</pose>
+                <geometry><sphere><radius>0.108</radius></sphere></geometry>
+                <material><diffuse>0.87 0.81 0.12 1</diffuse><ambient>0.87 0.81 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_1_seg6">
+                <pose>0 0 0.721 0 0 0</pose>
+                <geometry><sphere><radius>0.092</radius></sphere></geometry>
+                <material><diffuse>0.87 0.81 0.12 1</diffuse><ambient>0.87 0.81 0.12 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_0_2">
+  <pose>0.136 0.022 1.813 0 0.665312 0.161342</pose>
+
+          <visual name="stalk_2_0_2">
+            <pose>0 0 0.247 0 0 0</pose>
+            <geometry><cylinder><radius>0.070</radius><length>0.494</length></cylinder></geometry>
+            <material><diffuse>0.41 0.21 0.13 1</diffuse><ambient>0.41 0.21 0.13 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_0_2_seg0">
+                <pose>0 0 0.450 0 0 0</pose>
+                <geometry><sphere><radius>0.114</radius></sphere></geometry>
+                <material><diffuse>0.92 0.76 0.12 1</diffuse><ambient>0.92 0.76 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_2_seg1">
+                <pose>0 0 0.507 0 0 0</pose>
+                <geometry><sphere><radius>0.135</radius></sphere></geometry>
+                <material><diffuse>0.92 0.76 0.12 1</diffuse><ambient>0.92 0.76 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_2_seg2">
+                <pose>0 0 0.564 0 0 0</pose>
+                <geometry><sphere><radius>0.155</radius></sphere></geometry>
+                <material><diffuse>0.92 0.76 0.12 1</diffuse><ambient>0.92 0.76 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_2_seg3">
+                <pose>0 0 0.621 0 0 0</pose>
+                <geometry><sphere><radius>0.176</radius></sphere></geometry>
+                <material><diffuse>0.92 0.76 0.12 1</diffuse><ambient>0.92 0.76 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_2_seg4">
+                <pose>0 0 0.678 0 0 0</pose>
+                <geometry><sphere><radius>0.155</radius></sphere></geometry>
+                <material><diffuse>0.92 0.76 0.12 1</diffuse><ambient>0.92 0.76 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_2_seg5">
+                <pose>0 0 0.735 0 0 0</pose>
+                <geometry><sphere><radius>0.135</radius></sphere></geometry>
+                <material><diffuse>0.92 0.76 0.12 1</diffuse><ambient>0.92 0.76 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_0_2_seg6">
+                <pose>0 0 0.792 0 0 0</pose>
+                <geometry><sphere><radius>0.114</radius></sphere></geometry>
+                <material><diffuse>0.92 0.76 0.12 1</diffuse><ambient>0.92 0.76 0.12 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+<model name="tree_2_1"><pose>9.00 15.59 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.425 0 0 0</pose>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.210</radius><length>2.850</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_2_1_0">
+  <pose>0.205 -0.016 1.965 0 0.396862 -0.080004</pose>
+
+              <visual name="frond_seg_2_1_0_0">
+                <pose>0.000 0 0.171 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.201 0.343</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.33 1</diffuse><ambient>0.18 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_0_1">
+                <pose>0.044 0 0.508 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.201 0.343</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.33 1</diffuse><ambient>0.18 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_0_2">
+                <pose>0.174 0 0.822 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.201 0.343</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.33 1</diffuse><ambient>0.18 0.83 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_0_3">
+                <pose>0.381 0 1.091 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.201 0.343</size></box></geometry>
+                <material><diffuse>0.18 0.83 0.33 1</diffuse><ambient>0.18 0.83 0.33 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_1_1">
+  <pose>0.137 0.154 2.639 0 0.208693 0.840658</pose>
+
+              <visual name="frond_seg_2_1_1_0">
+                <pose>0.000 0 0.204 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.233 0.409</size></box></geometry>
+                <material><diffuse>0.22 0.79 0.32 1</diffuse><ambient>0.22 0.79 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_1_1">
+                <pose>0.053 0 0.606 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.233 0.409</size></box></geometry>
+                <material><diffuse>0.22 0.79 0.32 1</diffuse><ambient>0.22 0.79 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_1_2">
+                <pose>0.208 0 0.981 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.233 0.409</size></box></geometry>
+                <material><diffuse>0.22 0.79 0.32 1</diffuse><ambient>0.22 0.79 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_1_3">
+                <pose>0.455 0 1.303 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.233 0.409</size></box></geometry>
+                <material><diffuse>0.22 0.79 0.32 1</diffuse><ambient>0.22 0.79 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_1_2">
+  <pose>-0.143 0.148 1.763 0 0.452808 2.338117</pose>
+
+              <visual name="frond_seg_2_1_2_0">
+                <pose>0.000 0 0.226 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.204 0.452</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.32 1</diffuse><ambient>0.20 0.79 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_2_1">
+                <pose>0.058 0 0.670 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.204 0.452</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.32 1</diffuse><ambient>0.20 0.79 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_2_2">
+                <pose>0.230 0 1.084 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.204 0.452</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.32 1</diffuse><ambient>0.20 0.79 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_2_3">
+                <pose>0.503 0 1.440 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.204 0.452</size></box></geometry>
+                <material><diffuse>0.20 0.79 0.32 1</diffuse><ambient>0.20 0.79 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_1_3">
+  <pose>-0.205 0.025 2.502 0 0.247243 3.020325</pose>
+
+              <visual name="frond_seg_2_1_3_0">
+                <pose>0.000 0 0.229 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.159 0.458</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.30 1</diffuse><ambient>0.24 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_3_1">
+                <pose>0.059 0 0.679 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.159 0.458</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.30 1</diffuse><ambient>0.24 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_3_2">
+                <pose>0.233 0 1.098 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.159 0.458</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.30 1</diffuse><ambient>0.24 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_3_3">
+                <pose>0.509 0 1.458 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.159 0.458</size></box></geometry>
+                <material><diffuse>0.24 0.77 0.30 1</diffuse><ambient>0.24 0.77 0.30 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_1_4">
+  <pose>-0.093 -0.184 1.902 0 0.414317 4.246560</pose>
+
+              <visual name="frond_seg_2_1_4_0">
+                <pose>0.000 0 0.129 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.235 0.257</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.33 1</diffuse><ambient>0.17 0.77 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_4_1">
+                <pose>0.033 0 0.381 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.235 0.257</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.33 1</diffuse><ambient>0.17 0.77 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_4_2">
+                <pose>0.131 0 0.617 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.235 0.257</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.33 1</diffuse><ambient>0.17 0.77 0.33 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_4_3">
+                <pose>0.286 0 0.819 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.235 0.257</size></box></geometry>
+                <material><diffuse>0.17 0.77 0.33 1</diffuse><ambient>0.17 0.77 0.33 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_1_5">
+  <pose>0.088 -0.186 2.768 0 0.155564 5.152389</pose>
+
+              <visual name="frond_seg_2_1_5_0">
+                <pose>0.000 0 0.235 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.220 0.470</size></box></geometry>
+                <material><diffuse>0.18 0.75 0.34 1</diffuse><ambient>0.18 0.75 0.34 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_5_1">
+                <pose>0.061 0 0.697 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.220 0.470</size></box></geometry>
+                <material><diffuse>0.18 0.75 0.34 1</diffuse><ambient>0.18 0.75 0.34 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_5_2">
+                <pose>0.239 0 1.128 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.220 0.470</size></box></geometry>
+                <material><diffuse>0.18 0.75 0.34 1</diffuse><ambient>0.18 0.75 0.34 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_1_5_3">
+                <pose>0.523 0 1.497 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.220 0.470</size></box></geometry>
+                <material><diffuse>0.18 0.75 0.34 1</diffuse><ambient>0.18 0.75 0.34 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_1_0">
+  <pose>0.009 -0.179 2.246 0 0.731399 4.763689</pose>
+
+          <visual name="stalk_2_1_0">
+            <pose>0 0 0.212 0 0 0</pose>
+            <geometry><cylinder><radius>0.069</radius><length>0.424</length></cylinder></geometry>
+            <material><diffuse>0.38 0.26 0.10 1</diffuse><ambient>0.38 0.26 0.10 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_1_0_seg0">
+                <pose>0 0 0.380 0 0 0</pose>
+                <geometry><sphere><radius>0.113</radius></sphere></geometry>
+                <material><diffuse>0.86 0.77 0.12 1</diffuse><ambient>0.86 0.77 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_0_seg1">
+                <pose>0 0 0.442 0 0 0</pose>
+                <geometry><sphere><radius>0.133</radius></sphere></geometry>
+                <material><diffuse>0.86 0.77 0.12 1</diffuse><ambient>0.86 0.77 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_0_seg2">
+                <pose>0 0 0.504 0 0 0</pose>
+                <geometry><sphere><radius>0.153</radius></sphere></geometry>
+                <material><diffuse>0.86 0.77 0.12 1</diffuse><ambient>0.86 0.77 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_0_seg3">
+                <pose>0 0 0.566 0 0 0</pose>
+                <geometry><sphere><radius>0.173</radius></sphere></geometry>
+                <material><diffuse>0.86 0.77 0.12 1</diffuse><ambient>0.86 0.77 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_0_seg4">
+                <pose>0 0 0.628 0 0 0</pose>
+                <geometry><sphere><radius>0.153</radius></sphere></geometry>
+                <material><diffuse>0.86 0.77 0.12 1</diffuse><ambient>0.86 0.77 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_0_seg5">
+                <pose>0 0 0.691 0 0 0</pose>
+                <geometry><sphere><radius>0.133</radius></sphere></geometry>
+                <material><diffuse>0.86 0.77 0.12 1</diffuse><ambient>0.86 0.77 0.12 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_0_seg6">
+                <pose>0 0 0.753 0 0 0</pose>
+                <geometry><sphere><radius>0.113</radius></sphere></geometry>
+                <material><diffuse>0.86 0.77 0.12 1</diffuse><ambient>0.86 0.77 0.12 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_1_1">
+  <pose>-0.160 0.081 2.270 0 0.741056 2.673519</pose>
+
+          <visual name="stalk_2_1_1">
+            <pose>0 0 0.228 0 0 0</pose>
+            <geometry><cylinder><radius>0.060</radius><length>0.455</length></cylinder></geometry>
+            <material><diffuse>0.36 0.25 0.13 1</diffuse><ambient>0.36 0.25 0.13 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_1_1_seg0">
+                <pose>0 0 0.418 0 0 0</pose>
+                <geometry><sphere><radius>0.097</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_1_seg1">
+                <pose>0 0 0.465 0 0 0</pose>
+                <geometry><sphere><radius>0.115</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_1_seg2">
+                <pose>0 0 0.512 0 0 0</pose>
+                <geometry><sphere><radius>0.132</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_1_seg3">
+                <pose>0 0 0.559 0 0 0</pose>
+                <geometry><sphere><radius>0.150</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_1_seg4">
+                <pose>0 0 0.606 0 0 0</pose>
+                <geometry><sphere><radius>0.132</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_1_seg5">
+                <pose>0 0 0.653 0 0 0</pose>
+                <geometry><sphere><radius>0.115</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_1_seg6">
+                <pose>0 0 0.700 0 0 0</pose>
+                <geometry><sphere><radius>0.097</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_1_2">
+  <pose>0.037 0.174 2.074 0 0.695374 1.359585</pose>
+
+          <visual name="stalk_2_1_2">
+            <pose>0 0 0.248 0 0 0</pose>
+            <geometry><cylinder><radius>0.072</radius><length>0.496</length></cylinder></geometry>
+            <material><diffuse>0.37 0.22 0.05 1</diffuse><ambient>0.37 0.22 0.05 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_1_2_seg0">
+                <pose>0 0 0.452 0 0 0</pose>
+                <geometry><sphere><radius>0.117</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_2_seg1">
+                <pose>0 0 0.512 0 0 0</pose>
+                <geometry><sphere><radius>0.137</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_2_seg2">
+                <pose>0 0 0.572 0 0 0</pose>
+                <geometry><sphere><radius>0.158</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_2_seg3">
+                <pose>0 0 0.632 0 0 0</pose>
+                <geometry><sphere><radius>0.179</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_2_seg4">
+                <pose>0 0 0.692 0 0 0</pose>
+                <geometry><sphere><radius>0.158</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_2_seg5">
+                <pose>0 0 0.752 0 0 0</pose>
+                <geometry><sphere><radius>0.137</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_2_seg6">
+                <pose>0 0 0.813 0 0 0</pose>
+                <geometry><sphere><radius>0.117</radius></sphere></geometry>
+                <material><diffuse>0.88 0.76 0.07 1</diffuse><ambient>0.88 0.76 0.07 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_1_3">
+  <pose>-0.027 0.178 2.270 0 0.780912 1.723549</pose>
+
+          <visual name="stalk_2_1_3">
+            <pose>0 0 0.227 0 0 0</pose>
+            <geometry><cylinder><radius>0.067</radius><length>0.455</length></cylinder></geometry>
+            <material><diffuse>0.41 0.25 0.09 1</diffuse><ambient>0.41 0.25 0.09 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_1_3_seg0">
+                <pose>0 0 0.413 0 0 0</pose>
+                <geometry><sphere><radius>0.108</radius></sphere></geometry>
+                <material><diffuse>0.94 0.80 0.14 1</diffuse><ambient>0.94 0.80 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_3_seg1">
+                <pose>0 0 0.463 0 0 0</pose>
+                <geometry><sphere><radius>0.128</radius></sphere></geometry>
+                <material><diffuse>0.94 0.80 0.14 1</diffuse><ambient>0.94 0.80 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_3_seg2">
+                <pose>0 0 0.514 0 0 0</pose>
+                <geometry><sphere><radius>0.147</radius></sphere></geometry>
+                <material><diffuse>0.94 0.80 0.14 1</diffuse><ambient>0.94 0.80 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_3_seg3">
+                <pose>0 0 0.564 0 0 0</pose>
+                <geometry><sphere><radius>0.167</radius></sphere></geometry>
+                <material><diffuse>0.94 0.80 0.14 1</diffuse><ambient>0.94 0.80 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_3_seg4">
+                <pose>0 0 0.614 0 0 0</pose>
+                <geometry><sphere><radius>0.147</radius></sphere></geometry>
+                <material><diffuse>0.94 0.80 0.14 1</diffuse><ambient>0.94 0.80 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_3_seg5">
+                <pose>0 0 0.665 0 0 0</pose>
+                <geometry><sphere><radius>0.128</radius></sphere></geometry>
+                <material><diffuse>0.94 0.80 0.14 1</diffuse><ambient>0.94 0.80 0.14 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_1_3_seg6">
+                <pose>0 0 0.715 0 0 0</pose>
+                <geometry><sphere><radius>0.108</radius></sphere></geometry>
+                <material><diffuse>0.94 0.80 0.14 1</diffuse><ambient>0.94 0.80 0.14 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+<model name="tree_2_2"><pose>18.00 15.59 0 0 0 0</pose>
+<static>true</static>
+
+    <link name="trunk">
+      <pose>0 0 1.092 0 0 0</pose>
+      <visual name="trunk_vis">
+        <geometry><cylinder><radius>0.155</radius><length>2.184</length></cylinder></geometry>
+        <material><diffuse>0.45 0.27 0.1 1</diffuse><ambient>0.45 0.27 0.1 1</ambient></material>
+      </visual>
+    </link>
+    
+<link name="frond_2_2_0">
+  <pose>0.151 -0.008 1.158 0 0.525526 -0.051989</pose>
+
+              <visual name="frond_seg_2_2_0_0">
+                <pose>0.000 0 0.204 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.155 0.407</size></box></geometry>
+                <material><diffuse>0.16 0.81 0.28 1</diffuse><ambient>0.16 0.81 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_0_1">
+                <pose>0.053 0 0.604 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.155 0.407</size></box></geometry>
+                <material><diffuse>0.16 0.81 0.28 1</diffuse><ambient>0.16 0.81 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_0_2">
+                <pose>0.207 0 0.977 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.155 0.407</size></box></geometry>
+                <material><diffuse>0.16 0.81 0.28 1</diffuse><ambient>0.16 0.81 0.28 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_0_3">
+                <pose>0.453 0 1.298 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.155 0.407</size></box></geometry>
+                <material><diffuse>0.16 0.81 0.28 1</diffuse><ambient>0.16 0.81 0.28 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_1">
+  <pose>0.087 0.124 1.201 0 0.509844 0.956747</pose>
+
+              <visual name="frond_seg_2_2_1_0">
+                <pose>0.000 0 0.221 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.211 0.441</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.30 1</diffuse><ambient>0.23 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_1_1">
+                <pose>0.057 0 0.654 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.211 0.441</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.30 1</diffuse><ambient>0.23 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_1_2">
+                <pose>0.224 0 1.058 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.211 0.441</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.30 1</diffuse><ambient>0.23 0.77 0.30 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_1_3">
+                <pose>0.491 0 1.405 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.211 0.441</size></box></geometry>
+                <material><diffuse>0.23 0.77 0.30 1</diffuse><ambient>0.23 0.77 0.30 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_2">
+  <pose>0.030 0.148 1.518 0 0.395238 1.370353</pose>
+
+              <visual name="frond_seg_2_2_2_0">
+                <pose>0.000 0 0.233 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.249 0.465</size></box></geometry>
+                <material><diffuse>0.18 0.81 0.31 1</diffuse><ambient>0.18 0.81 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_2_1">
+                <pose>0.060 0 0.690 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.249 0.465</size></box></geometry>
+                <material><diffuse>0.18 0.81 0.31 1</diffuse><ambient>0.18 0.81 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_2_2">
+                <pose>0.237 0 1.116 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.249 0.465</size></box></geometry>
+                <material><diffuse>0.18 0.81 0.31 1</diffuse><ambient>0.18 0.81 0.31 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_2_3">
+                <pose>0.517 0 1.481 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.249 0.465</size></box></geometry>
+                <material><diffuse>0.18 0.81 0.31 1</diffuse><ambient>0.18 0.81 0.31 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_3">
+  <pose>-0.091 0.120 2.005 0 0.216803 2.220106</pose>
+
+              <visual name="frond_seg_2_2_3_0">
+                <pose>0.000 0 0.151 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.171 0.302</size></box></geometry>
+                <material><diffuse>0.22 0.77 0.27 1</diffuse><ambient>0.22 0.77 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_3_1">
+                <pose>0.039 0 0.448 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.171 0.302</size></box></geometry>
+                <material><diffuse>0.22 0.77 0.27 1</diffuse><ambient>0.22 0.77 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_3_2">
+                <pose>0.154 0 0.724 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.171 0.302</size></box></geometry>
+                <material><diffuse>0.22 0.77 0.27 1</diffuse><ambient>0.22 0.77 0.27 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_3_3">
+                <pose>0.336 0 0.962 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.171 0.302</size></box></geometry>
+                <material><diffuse>0.22 0.77 0.27 1</diffuse><ambient>0.22 0.77 0.27 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_4">
+  <pose>-0.127 0.082 1.088 0 0.550763 2.570031</pose>
+
+              <visual name="frond_seg_2_2_4_0">
+                <pose>0.000 0 0.181 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.209 0.363</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.32 1</diffuse><ambient>0.18 0.77 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_4_1">
+                <pose>0.047 0 0.538 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.209 0.363</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.32 1</diffuse><ambient>0.18 0.77 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_4_2">
+                <pose>0.185 0 0.870 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.209 0.363</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.32 1</diffuse><ambient>0.18 0.77 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_4_3">
+                <pose>0.403 0 1.155 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.209 0.363</size></box></geometry>
+                <material><diffuse>0.18 0.77 0.32 1</diffuse><ambient>0.18 0.77 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_5">
+  <pose>-0.136 -0.066 1.529 0 0.391241 3.596943</pose>
+
+              <visual name="frond_seg_2_2_5_0">
+                <pose>0.000 0 0.211 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.242 0.422</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.32 1</diffuse><ambient>0.23 0.81 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_5_1">
+                <pose>0.055 0 0.626 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.242 0.422</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.32 1</diffuse><ambient>0.23 0.81 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_5_2">
+                <pose>0.215 0 1.012 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.242 0.422</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.32 1</diffuse><ambient>0.23 0.81 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_5_3">
+                <pose>0.469 0 1.344 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.242 0.422</size></box></geometry>
+                <material><diffuse>0.23 0.81 0.32 1</diffuse><ambient>0.23 0.81 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_6">
+  <pose>-0.044 -0.145 1.501 0 0.401452 4.415858</pose>
+
+              <visual name="frond_seg_2_2_6_0">
+                <pose>0.000 0 0.193 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.215 0.386</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.26 1</diffuse><ambient>0.24 0.83 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_6_1">
+                <pose>0.050 0 0.573 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.215 0.386</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.26 1</diffuse><ambient>0.24 0.83 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_6_2">
+                <pose>0.196 0 0.926 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.215 0.386</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.26 1</diffuse><ambient>0.24 0.83 0.26 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_6_3">
+                <pose>0.430 0 1.230 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.215 0.386</size></box></geometry>
+                <material><diffuse>0.24 0.83 0.26 1</diffuse><ambient>0.24 0.83 0.26 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_7">
+  <pose>-0.000 -0.151 1.386 0 0.442990 4.711999</pose>
+
+              <visual name="frond_seg_2_2_7_0">
+                <pose>0.000 0 0.219 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.207 0.437</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.32 1</diffuse><ambient>0.18 0.76 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_7_1">
+                <pose>0.057 0 0.648 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.207 0.437</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.32 1</diffuse><ambient>0.18 0.76 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_7_2">
+                <pose>0.222 0 1.049 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.207 0.437</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.32 1</diffuse><ambient>0.18 0.76 0.32 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_7_3">
+                <pose>0.486 0 1.393 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.207 0.437</size></box></geometry>
+                <material><diffuse>0.18 0.76 0.32 1</diffuse><ambient>0.18 0.76 0.32 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="frond_2_2_8">
+  <pose>0.125 -0.085 2.116 0 0.159010 5.689634</pose>
+
+              <visual name="frond_seg_2_2_8_0">
+                <pose>0.000 0 0.243 0 0.000000 0</pose>
+                <geometry><box><size>0.020 0.200 0.486</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.25 1</diffuse><ambient>0.20 0.76 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_8_1">
+                <pose>0.063 0 0.720 0 0.261799 0</pose>
+                <geometry><box><size>0.020 0.200 0.486</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.25 1</diffuse><ambient>0.20 0.76 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_8_2">
+                <pose>0.247 0 1.165 0 0.523599 0</pose>
+                <geometry><box><size>0.020 0.200 0.486</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.25 1</diffuse><ambient>0.20 0.76 0.25 1</ambient></material>
+              </visual>
+            
+
+              <visual name="frond_seg_2_2_8_3">
+                <pose>0.540 0 1.547 0 0.785398 0</pose>
+                <geometry><box><size>0.020 0.200 0.486</size></box></geometry>
+                <material><diffuse>0.20 0.76 0.25 1</diffuse><ambient>0.20 0.76 0.25 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_2_0">
+  <pose>-0.057 0.117 1.699 0 0.654563 2.025206</pose>
+
+          <visual name="stalk_2_2_0">
+            <pose>0 0 0.247 0 0 0</pose>
+            <geometry><cylinder><radius>0.053</radius><length>0.494</length></cylinder></geometry>
+            <material><diffuse>0.42 0.23 0.05 1</diffuse><ambient>0.42 0.23 0.05 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_2_0_seg0">
+                <pose>0 0 0.461 0 0 0</pose>
+                <geometry><sphere><radius>0.086</radius></sphere></geometry>
+                <material><diffuse>0.91 0.85 0.15 1</diffuse><ambient>0.91 0.85 0.15 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_0_seg1">
+                <pose>0 0 0.509 0 0 0</pose>
+                <geometry><sphere><radius>0.101</radius></sphere></geometry>
+                <material><diffuse>0.91 0.85 0.15 1</diffuse><ambient>0.91 0.85 0.15 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_0_seg2">
+                <pose>0 0 0.557 0 0 0</pose>
+                <geometry><sphere><radius>0.116</radius></sphere></geometry>
+                <material><diffuse>0.91 0.85 0.15 1</diffuse><ambient>0.91 0.85 0.15 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_0_seg3">
+                <pose>0 0 0.604 0 0 0</pose>
+                <geometry><sphere><radius>0.132</radius></sphere></geometry>
+                <material><diffuse>0.91 0.85 0.15 1</diffuse><ambient>0.91 0.85 0.15 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_0_seg4">
+                <pose>0 0 0.652 0 0 0</pose>
+                <geometry><sphere><radius>0.116</radius></sphere></geometry>
+                <material><diffuse>0.91 0.85 0.15 1</diffuse><ambient>0.91 0.85 0.15 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_0_seg5">
+                <pose>0 0 0.700 0 0 0</pose>
+                <geometry><sphere><radius>0.101</radius></sphere></geometry>
+                <material><diffuse>0.91 0.85 0.15 1</diffuse><ambient>0.91 0.85 0.15 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_0_seg6">
+                <pose>0 0 0.747 0 0 0</pose>
+                <geometry><sphere><radius>0.086</radius></sphere></geometry>
+                <material><diffuse>0.91 0.85 0.15 1</diffuse><ambient>0.91 0.85 0.15 1</ambient></material>
+              </visual>
+            
+</link>
+<link name="fruit_bunch_2_2_1">
+  <pose>-0.130 0.024 1.839 0 0.724575 2.956244</pose>
+
+          <visual name="stalk_2_2_1">
+            <pose>0 0 0.189 0 0 0</pose>
+            <geometry><cylinder><radius>0.077</radius><length>0.377</length></cylinder></geometry>
+            <material><diffuse>0.38 0.23 0.12 1</diffuse><ambient>0.38 0.23 0.12 1</ambient></material>
+          </visual>
+        
+
+              <visual name="fruit_2_2_1_seg0">
+                <pose>0 0 0.329 0 0 0</pose>
+                <geometry><sphere><radius>0.126</radius></sphere></geometry>
+                <material><diffuse>0.91 0.80 0.06 1</diffuse><ambient>0.91 0.80 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_1_seg1">
+                <pose>0 0 0.395 0 0 0</pose>
+                <geometry><sphere><radius>0.149</radius></sphere></geometry>
+                <material><diffuse>0.91 0.80 0.06 1</diffuse><ambient>0.91 0.80 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_1_seg2">
+                <pose>0 0 0.461 0 0 0</pose>
+                <geometry><sphere><radius>0.171</radius></sphere></geometry>
+                <material><diffuse>0.91 0.80 0.06 1</diffuse><ambient>0.91 0.80 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_1_seg3">
+                <pose>0 0 0.527 0 0 0</pose>
+                <geometry><sphere><radius>0.194</radius></sphere></geometry>
+                <material><diffuse>0.91 0.80 0.06 1</diffuse><ambient>0.91 0.80 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_1_seg4">
+                <pose>0 0 0.593 0 0 0</pose>
+                <geometry><sphere><radius>0.171</radius></sphere></geometry>
+                <material><diffuse>0.91 0.80 0.06 1</diffuse><ambient>0.91 0.80 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_1_seg5">
+                <pose>0 0 0.659 0 0 0</pose>
+                <geometry><sphere><radius>0.149</radius></sphere></geometry>
+                <material><diffuse>0.91 0.80 0.06 1</diffuse><ambient>0.91 0.80 0.06 1</ambient></material>
+              </visual>
+            
+
+              <visual name="fruit_2_2_1_seg6">
+                <pose>0 0 0.724 0 0 0</pose>
+                <geometry><sphere><radius>0.126</radius></sphere></geometry>
+                <material><diffuse>0.91 0.80 0.06 1</diffuse><ambient>0.91 0.80 0.06 1</ambient></material>
+              </visual>
+            
+</link>
+</model>
+  </world>
+</sdf>

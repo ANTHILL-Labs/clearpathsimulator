@@ -1,0 +1,20 @@
+material DirtGround/Dirt
+{
+  technique
+  {
+    pass
+    {
+      lighting on
+      ambient 0.7 0.7 0.7 1
+      diffuse 0.9 0.9 0.9 1
+      specular 0.05 0.05 0.05 1
+
+      texture_unit
+      {
+        texture dirt_albedo.jpg
+        filtering trilinear
+        scale 4 4
+      }
+    }
+  }
+}

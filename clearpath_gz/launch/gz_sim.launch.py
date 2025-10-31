@@ -67,7 +67,9 @@ def gz_launch(context, *args, **kwargs):
                          auto_start_option,
                          ' -v 4',
                          ' --gui-config ',
-                         gui_config])
+                         gui_config,
+                         ' --physics-engine ',
+                         'gz-physics-bullet-plugin'])
         ]
     )
 

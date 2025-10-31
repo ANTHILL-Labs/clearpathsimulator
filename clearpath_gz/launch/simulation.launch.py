@@ -34,6 +34,7 @@ ARGUMENTS = [
                               'pipeline',
                               'solar_farm',
                               'warehouse',
+                              'custom',
                           ],
                           description='Gazebo World'),
     DeclareLaunchArgument('setup_path',
